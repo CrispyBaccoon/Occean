@@ -62,17 +62,23 @@ createOcean = function () {
 //</div>
 //</header>
 
-makeDune = function (dune) {
-  sand = '<li><a href="' + dune + '.html">' + dune + "</a></li>";
+makeDune = function (valley, rainfall) {
+  sand = '<li><a href="' + rainfall + '">' + valley + "</a></li>";
   return sand;
 };
 
 makeBeach = function () {
-  pages = ["download", "docs", "learn"];
+  pages = [
+    "download#https://github.com/CrispyBaccoon/Occean/archive/refs/heads/main.zip",
+    "docs#https://github.com/CrispyBaccoon/Occean",
+    "learn#https://github.com/CrispyBaccoon/",
+  ];
   dunes = "";
   for (i = 0; i < pages.length; i++) {
     dune = pages[i];
-    dunes += makeDune(dune);
+    valley = dune.split("#")[0];
+    rainfall = dune.split("#")[1];
+    dunes += makeDune(valley, rainfall);
   }
   return dunes;
 };
