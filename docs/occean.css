@@ -1,0 +1,264 @@
+:root {
+  --clr-prim-dark: hsl(227,55%,31%);
+  --clr-prim-1: hsl(227,80%,61%);
+  --clr-prim-2: #4E9FF5;
+  --clr-prim-3: #53BBDE;
+  --clr-accent-1: #4EF5F2;
+  --clr-accent-2: #4BEBBB;
+
+  --clr-neutral-100: #fff;
+  --clr-neutral-900: #222c2a;
+
+  --ff-primary: Verdana, sans-serif;
+  --ff-accent: Verdana, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  background-image: url("abc");
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-accent);
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2,
+h3,
+p {
+  margin-bottom: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* unvisited link */
+a:link {
+  font-family: var(--ff-primary);
+  color: var(--clr-accent-200);
+}
+
+/* visited link */
+a:visited {
+  font-family: var(--ff-primary);
+  color: var(--clr-accent-200);
+}
+
+/* mouse over link */
+a:hover {
+  font-family: var(--ff-primary);
+  color: var(--clr-neutral-100);
+}
+
+/* selected link */
+a:active {
+  font-family: var(--ff-primary);
+  color: var(--clr-neutral-100);
+}
+
+ul {
+  list-style: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nospace {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: none;
+}
+
+section {
+  padding: 4rem 0;
+  @media (min-width: 40em) {
+    section {
+      padding: 7rem 0;
+    }
+  }
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.container--narrow {
+  max-width: 34rem;
+}
+
+.bg-1 {
+  background-color: var(--clr-prim-dark);
+  color: var(--clr-prim-1);
+}
+.bg-2 {
+  background-color: var(--clr-prim-3);
+}
+.bg-3 {
+  background-color: var(--clr-accent-3);
+}
+.bg-4 {
+  background-color: var(--clr-accent-4);
+}
+.bg-5 {
+  background-color: var(--clr-accent-5)
+}
+
+#Cape {
+  margin: 0;
+  padding: 0 5%;
+}
+
+#Cape::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+#OcceanHead a {
+  display: inline-block;
+  padding: 0.2em 0.2em;
+
+  color: var(--clr-accent-3);
+  text-transform: capitalize;
+  font-family: var(--ff-accent);
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/*#OcceanHead:hover {*/
+  
+/*}*/
+
+#OcceanName {
+  padding-left: 4em;
+  float: left;
+}
+
+#Occean {
+  width: 100%;
+}
+
+#OcceanList {
+  display: none;
+  margin: 0;
+  padding: 1em;
+}
+
+#OcceanList button {
+  color: var(--clr-accent-3);
+  text-transform: capitalize;
+  font-size: 1.128em;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0 0.1em;
+  border-style: none;
+  background-color: var(--clr-accent-3);
+  
+  cursor: pointer;
+}
+
+#Beach {
+  float: right;
+}
+
+#Beach ul {
+  margin: 0;
+  padding: 0;
+}
+
+#Beach li {
+  display: inline-block;
+  margin-left: 4em;
+  padding: 1em 1em;
+}
+
+#Beach a {
+  color: var(--clr-accent-3);
+  text-transform: capitalize;
+  font-size: 1.128em;
+  font-weight: bold;
+}
+
+li:hover {
+  color: var(--clr-neutral-100);
+}
+
+#OcceanHead button {
+  color: var(--clr-accent-3);
+  text-transform: capitalize;
+  font-size: 1.75em;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0 0.1em;
+  border-style: none;
+  background-color: var(--clr-accent-3);
+  
+  cursor: pointer;
+}
+
+/*###########*/
+.bg-light {
+  background-color: var(--clr-primary-200);
+}
+
+.bg-primary {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+}
+
+.bg-dark {
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-neutral-900);
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-200);
+}
